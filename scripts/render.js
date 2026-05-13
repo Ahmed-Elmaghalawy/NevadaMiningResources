@@ -176,8 +176,8 @@ function renderMarketWidget(widget) {
 }
 
 function renderKitcoWidget(widgetId) {
-  const wrapper = el("div", "widget-wrapper", { style: "margin: 50px auto 0 auto; width: 100%; display: flex; justify-content: center;" });
-  wrapper.appendChild(el("div", "", { id: widgetId, style: "margin-bottom: 60px;width:100%" }));
+  const wrapper = el("div", `widget-wrapper mt-12 flex w-full justify-center overflow-hidden rounded-lg border border-gold-300/15 bg-neutral-950/80 p-4 shadow-glow ring-1 ring-white/10 ${smooth}`);
+  wrapper.appendChild(el("div", "w-full bg-neutral-950 text-white", { id: widgetId, style: "margin-bottom: 0;width:100%;color-scheme:dark;" }));
   return wrapper;
 }
 
@@ -190,7 +190,7 @@ function initKitcoWidgets() {
       config: {
         widgetId: "widget_live_precious_metals",
         width: "1000",
-        isTransparent: false,
+        isTransparent: true,
         colorTheme: "dark",
         defaultUnit: "Troy Ounces",
         defaultCurrency: "USD",
@@ -207,7 +207,7 @@ function initKitcoWidgets() {
       factory: "createSpotePriceWidget",
       config: {
         width: 300,
-        isTransparent: false,
+        isTransparent: true,
         colorTheme: "dark"
       }
     },
@@ -218,7 +218,7 @@ function initKitcoWidgets() {
       config: {
         widgetId: "widget_morning_fix",
         width: "500",
-        isTransparent: false,
+        isTransparent: true,
         colorTheme: "dark",
         defaultUnit: "Troy Ounces",
         defaultCurrency: "USD",
@@ -234,7 +234,7 @@ function initKitcoWidgets() {
       config: {
         widgetId: "widget_cross_rates",
         width: "600",
-        isTransparent: false,
+        isTransparent: true,
         colorTheme: "dark",
         defaultUnit: "Troy Ounces",
         defaultShowChange: true,
