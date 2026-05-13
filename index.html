@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Nevada Mining Resources</title>
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                50: "#fff9db",
+                100: "#fff1a8",
+                300: "#f7d154",
+                500: "#d6a528",
+                700: "#8c6515",
+                900: "#3b2a09"
+              }
+            },
+            boxShadow: {
+              glow: "0 24px 80px rgba(214, 165, 40, 0.22)"
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = window.tailwind.config;
+    </script>
+    <script>
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    </script>
+  </head>
+  <body class="bg-neutral-950 text-stone-100 antialiased transition-colors duration-500 ease-out">
+    <div class="hidden
+      bg-stone-50 bg-stone-100 bg-white bg-white/35 bg-white/45 bg-white/55 bg-white/70
+      text-stone-950 text-stone-700 text-stone-600 text-white text-neutral-950
+      border-white/60 border-gold-500/20 border-gold-500/25 border-gold-500/30 border-gold-500/40
+      ring-white/40 ring-white/60 ring-gold-500/10 ring-gold-500/20 shadow-sm shadow-glow backdrop-blur-xl backdrop-blur-2xl
+      transition-all transition-colors duration-500 duration-700 ease-out opacity-0 opacity-100 translate-y-0 translate-y-6
+      hover:bg-white/70 hover:bg-gold-100 hover:bg-gold-300 hover:text-stone-950 hover:border-gold-500 hover:shadow-sm
+      dark:bg-neutral-950 dark:bg-neutral-950/55 dark:bg-neutral-900 dark:bg-neutral-900/45 dark:bg-white/5 dark:bg-white/10
+      dark:text-white dark:text-stone-100 dark:text-stone-200 dark:text-stone-300 dark:text-stone-400 dark:text-gold-300
+      dark:border-white/10 dark:border-gold-300/15 dark:border-gold-300/20 dark:ring-white/10 dark:ring-gold-300/10 dark:text-neutral-950
+      dark:hover:bg-white/10 dark:hover:bg-gold-500/10 dark:hover:text-white"></div>
+    <div id="app" class="min-h-screen"></div>
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>

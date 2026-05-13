@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "Nevada Mining Resources | Innovative Mining",
+    "description": "Environmentally friendly, flexible, mobile, modular mining platform from exploration to refining precious metals.",
+    "archiveSource": "Legacy Weebly/Wayback capture rebuilt as a static, white-label-ready site."
+  },
+  "brand": {
+    "name": "Nevada Mining Resources",
+    "tagline": "Innovative Mining",
+    "shortName": "NMR",
+    "logo": "assets/images/nevada-mining-resources-logo.png",
+    "symbol": "assets/images/gold-infinity.png"
+  },
+  "navigation": [
+    { "label": "Process", "href": "#process" },
+    { "label": "Participate", "href": "#participate" },
+    { "label": "Information", "href": "#information" },
+    { "label": "Contact", "href": "#contact" },
+    { "label": "Live Prices", "href": "#live-prices" }
+  ],
+  "hero": {
+    "eyebrow": "Innovative Mining",
+    "title": "Discover innovative gold mining.",
+    "subtitle": "Environmentally friendly, flexible, mobile, modular mining platform from exploration to refining precious metals.",
+    "primaryAction": { "label": "Tell me how it works", "href": "#process" },
+    "secondaryAction": { "label": "I want to participate", "href": "#participate" },
+    "stats": [
+      { "value": "0", "label": "chemicals used in the extraction platform" },
+      { "value": "0", "label": "water dependency in the mining method" },
+      { "value": "5M+", "label": "ounces in smaller Nevada gold deposits cited by the legacy site" }
+    ]
+  },
+  "process": {
+    "id": "process",
+    "kicker": "Innovative Platform",
+    "title": "Available now: mining, processing, recovery, and retail reimagined.",
+    "intro": "Nevada Mining Resources works in every stage of the gold development process, from mining to retail.",
+    "body": [
+      "NMR uses a unique method to extract gold from properties overlooked by the traditional mining industry.",
+      "The proprietary platform mines for gold without the use of chemicals or water. NMR also puts the tailings to work by reformulating unused dirt into bricks and pavers.",
+      "Because the mining method does not use chemicals or water, NMR can mine without the years-long permitting process, and can mine in areas previously deemed off-limits.",
+      "Smaller plots of land can become profit centers. Gold on inaccessible plots of land can now be discovered. Condemned mines can be reopened, safely, and restored to their chemical-free state.",
+      "The innovation continues through the collection of gold and into retail shops that sell and display gold with the flair of a fashion boutique."
+    ],
+    "steps": [
+      { "title": "Explore", "text": "Assess overlooked land, smaller deposits, and mine sites that conventional operators may ignore." },
+      { "title": "Recover", "text": "Use a mobile, modular platform designed around chemical-free and water-free gold extraction." },
+      { "title": "Restore", "text": "Reformulate unused dirt and tailings into usable bricks and pavers." },
+      { "title": "Retail", "text": "Bring refined gold into consumer-facing channels with a premium retail experience." }
+    ]
+  },
+  "participate": {
+    "id": "participate",
+    "kicker": "An Opportunity for All",
+    "title": "A platform for investors, land owners, regulators, suppliers, and consumers.",
+    "intro": "The State of Nevada is described by the legacy site as the largest in mineral riches in the United States and the largest land owner, with almost 90% of land under government management through BLM and other agencies.",
+    "body": [
+      "Since Nevada was surveyed by USGS many years ago, little has changed for smaller gold deposits of more than 5,000,000 ounces.",
+      "Without innovative advancements in mining, these deposits will remain buried and of no use or value to the Nevada or US economies.",
+      "Nevada Mining Resources offers an innovative platform to make a positive change to the mining industry, and to revitalize and stabilize economies around the world."
+    ],
+    "audiences": [
+      { "name": "Investors", "description": "Investment opportunities to allow for continued growth and expansion." },
+      { "name": "Property Owners", "description": "If your land has been overlooked by the mining industry, NMR wants to assess your property for gold." },
+      { "name": "Banks", "description": "Gold gives paper dollars credibility and backing." },
+      { "name": "Governments and Regulators", "description": "Unused and chemical-ridden land can be turned into a valuable asset for your community." },
+      { "name": "Suppliers", "description": "NMR is seeking retailers to distribute gold." },
+      { "name": "Consumers", "description": "Everyday consumers get the chance to handle and purchase gold." }
+    ],
+    "cta": { "label": "I want to participate", "href": "#contact" }
+  },
+  "information": {
+    "id": "information",
+    "kicker": "Information",
+    "title": "Reference materials from the legacy site.",
+    "intro": "The archived site listed these documents and gold-market resources. They are preserved here as structured data so future white-label builds can attach files, links, or gated downloads.",
+    "groups": [
+      {
+        "name": "Mine Agents",
+        "items": [
+          { "label": "Representation", "href": "Docs/nmr_representation_v5.pdf" },
+          { "label": "Agents FPA", "href": "Docs/nmr_agents_fpa_v5.pdf" }
+        ]
+      },
+      {
+        "name": "Mine Owners",
+        "items": [
+          { "label": "Letter of Intent", "href": "Docs/nmr_letter_of_intent_v5.pdf" },
+          { "label": "Memorandum of Understanding", "href": "Docs/nmr_memorundum_of_understanding_v5.pdf" },
+          { "label": "Mine Property Contract", "href": "Docs/nmr_property_contract_v5.pdf" }
+        ]
+      },
+      {
+        "name": "Gold in the News",
+        "items": [
+          { "label": "32 Reasons To Buy Gold", "href": "Docs/32_reasons_to_buy_gold.pdf" },
+          { "label": "Apple's Strategy is NMR's Strategy", "href": "Docs/apples_strategy_is_nmrs_strategy.pdf" },
+          { "label": "China Secures More Gold", "href": "Docs/china_secures_more_gold.pdf" },
+          { "label": "China's Fox Hunt 2014", "href": "Docs/chinas_fox_hunt_2014.pdf" },
+          { "label": "China's Ghost Cities Myth", "href": "Docs/chinas_ghost_cities_myth.pdf" },
+          { "label": "China's Massive Debt", "href": "Docs/chinas_massive_debt.pdf" },
+          { "label": "China's Mega Cities", "href": "Docs/chinas_mega_cities.pdf" },
+          { "label": "China's Mountain of Debt", "href": "Docs/chinas_mountain_of_debt.pdf" },
+          { "label": "China's Wall of Debt", "href": "Docs/chinas_wall_of_debt.pdf" },
+          { "label": "Chinese Gold Standard", "href": "Docs/chinese_gold_standard.pdf" },
+          { "label": "Chinese Gold Status", "href": "Docs/chinese_gold_status_nmr.pdf" },
+          { "label": "Country Gold Reserves", "href": "Docs/country_gold_reserves.pdf" },
+          { "label": "Current Gold Catalysts", "href": "Docs/current_gold_catalysts.pdf" },
+          { "label": "Gold Bullion Spot vs Futures", "href": "Docs/gold_bullion_spot_vs_futures.pdf" },
+          { "label": "Gold Demand", "href": "Docs/gold_demand.pdf" },
+          { "label": "Gold ETFs", "href": "Docs/gold_etfs.pdf" },
+          { "label": "Gold Factors", "href": "Docs/gold_factors.pdf" },
+          { "label": "Gold Paving The Way", "href": "Docs/gold_paving_the_way.pdf" },
+          { "label": "Gold War", "href": "Docs/gold_war.pdf" },
+          { "label": "How Much Money China Has", "href": "Docs/how_much_money_china_has.pdf" },
+          { "label": "HSBC Report On Gold", "href": "Docs/hsbc_report_on_gold.pdf" },
+          { "label": "New Gold Pricing", "href": "Docs/new_gold_pricing.pdf" },
+          { "label": "Nevada Gold", "href": "Docs/nevada_gold.pdf" },
+          { "label": "Nevada Gold Exports", "href": "Docs/nevada_gold_exports.pdf" },
+          { "label": "NMR vs The Majors", "href": "Docs/nmr_vs_the_majors.pdf" },
+          { "label": "Ripple Effects", "href": "Docs/ripple_effects.pdf" },
+          { "label": "Solving India's Gold Smuggling", "href": "Docs/solving_indias_gold_smuggling.pdf" },
+          { "label": "The Facts On Gold", "href": "Docs/the_facts_on_gold.pdf" },
+          { "label": "The Mystery of China's Gold Stash", "href": "Docs/the_mystery_of_chinas_gold_stash.pdf" },
+          { "label": "The World's Gold Facts", "href": "Docs/the_worlds_gold_facts.pdf" },
+          { "label": "Time To Buy Gold", "href": "Docs/time_to_buy_gold.pdf" },
+          { "label": "Types Of Gold", "href": "Docs/types_of_gold.pdf" },
+          { "label": "US Gold Exports", "href": "Docs/us_gold_exports.pdf" },
+          { "label": "What China Owns", "href": "Docs/what_china_owns.pdf" },
+          { "label": "World Gold Reserves", "href": "Docs/world_gold_reserves.pdf" },
+          { "label": "World's Gold", "href": "Docs/worlds_gold.pdf" },
+          { "label": "World's Largest Producing Gold Mines", "href": "Docs/worlds_largest_producing_gold_mines.pdf" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "id": "contact",
+    "kicker": "Contact",
+    "title": "Start the conversation.",
+    "intro": "Use this area as the white-label contact module. Swap the email, offices, and partner links from this JSON file when rebranding.",
+    "email": "info@example.com",
+    "offices": [
+      {
+        "city": "Hong Kong",
+        "lines": ["Two International Finance Centre", "8 Finance Street", "Central, Hong Kong, China"]
+      },
+      {
+        "city": "London",
+        "lines": ["Canary Wharf", "40 Bank Street", "London, United Kingdom"]
+      }
+    ],
+    "links": [
+      { "label": "Email Login", "href": "mailto:info@example.com" },
+      { "label": "Privacy Policy", "href": "#privacy" }
+    ]
+  },
+  "marketWidget": {
+    "id": "live-prices",
+    "kicker": "Live Metals",
+    "title": "Kitco Market Prices",
+    "intro": "Precious metals market references for World Spot Price and Kitco Morning Fix.",
+    "sourceName": "Kitco Precious Metals",
+    "sourceUrl": "https://www.kitco.com/price/precious-metals",
+    "spot": {
+      "title": "World Spot Price",
+      "currency": "USD",
+      "unit": "OZ",
+      "marketStatus": "OPEN",
+      "statusNote": "Precious metals spot market is currently active and trading.",
+      "closeNote": "Will close in 58 mins.",
+      "columns": ["Metals", "Date", "Time (EST)", "Bid", "Ask", "Change", "Low", "High"],
+      "prices": [
+        { "metal": "Gold", "href": "https://www.kitco.com/price/precious-metals/gold", "date": "May 13, 2026", "time": "16:03", "bid": "4,685.50", "ask": "4,687.50", "change": "-28.90", "changePercent": "-0.61%", "direction": "down", "low": "4,669.00", "high": "4,727.60" },
+        { "metal": "Silver", "href": "https://www.kitco.com/price/precious-metals/silver", "date": "May 13, 2026", "time": "16:03", "bid": "87.41", "ask": "87.66", "change": "0.97", "changePercent": "1.12%", "direction": "up", "low": "82.71", "high": "89.47" },
+        { "metal": "Platinum", "href": "https://www.kitco.com/price/precious-metals/platinum", "date": "May 13, 2026", "time": "16:03", "bid": "2,147.00", "ask": "2,157.00", "change": "23.00", "changePercent": "1.08%", "direction": "up", "low": "2,094.00", "high": "2,201.00" },
+        { "metal": "Palladium", "href": "https://www.kitco.com/price/precious-metals/palladium", "date": "May 13, 2026", "time": "16:03", "bid": "1,486.00", "ask": "1,526.00", "change": "13.00", "changePercent": "0.88%", "direction": "up", "low": "1,455.00", "high": "1,550.00" },
+        { "metal": "Rhodium", "href": "https://www.kitco.com/charts/rhodium", "date": "May 12, 2026", "time": "18:00", "bid": "9,500.00", "ask": "10,500.00", "change": "-", "changePercent": "-", "direction": "flat", "low": "9,300.00", "high": "10,600.00" }
+      ]
+    },
+    "newYorkSpot": {
+      "title": "New York Spot Price",
+      "currency": "USD",
+      "unit": "OZ",
+      "marketStatus": "OPEN",
+      "statusNote": "Precious metals spot market is currently active and trading.",
+      "closeNote": "Will close in 55 mins.",
+      "columns": ["Metals", "Date", "Time (EST)", "Bid", "Ask", "Change", "Low", "High"],
+      "prices": [
+        { "metal": "Gold", "href": "https://www.kitco.com/price/precious-metals/gold", "date": "May 13, 2026", "time": "16:05", "bid": "4,685.90", "ask": "4,687.90", "change": "-28.50", "changePercent": "-0.60%", "direction": "down", "low": "4,669.00", "high": "4,727.60" },
+        { "metal": "Silver", "href": "https://www.kitco.com/price/precious-metals/silver", "date": "May 13, 2026", "time": "16:05", "bid": "87.39", "ask": "87.64", "change": "0.95", "changePercent": "1.09%", "direction": "up", "low": "82.71", "high": "89.47" },
+        { "metal": "Platinum", "href": "https://www.kitco.com/price/precious-metals/platinum", "date": "May 13, 2026", "time": "16:05", "bid": "2,147.00", "ask": "2,157.00", "change": "23.00", "changePercent": "1.08%", "direction": "up", "low": "2,094.00", "high": "2,201.00" },
+        { "metal": "Palladium", "href": "https://www.kitco.com/price/precious-metals/palladium", "date": "May 13, 2026", "time": "16:05", "bid": "1,486.00", "ask": "1,526.00", "change": "13.00", "changePercent": "0.88%", "direction": "up", "low": "1,455.00", "high": "1,550.00" },
+        { "metal": "Rhodium", "href": "https://www.kitco.com/charts/rhodium", "date": "May 12, 2026", "time": "18:00", "bid": "9,500.00", "ask": "10,500.00", "change": "-", "changePercent": "-", "direction": "flat", "low": "9,300.00", "high": "10,600.00" }
+      ]
+    },
+    "morningFix": {
+      "title": "Kitco Morning Fix",
+      "date": "May 13, 2026",
+      "currency": "USD",
+      "unit": "OZ",
+      "note": "Prices posted around 10:30 AM local time in each hub",
+      "hubs": [
+        { "city": "Hong Kong", "time": "10:31 (HKT)", "flag": "HK", "prices": { "Gold": "4,698.45", "Silver": "86.83", "Platinum": "2,111.00", "Palladium": "1,490.00" } },
+        { "city": "Mumbai", "time": "10:31 (IST)", "flag": "IN", "prices": { "Gold": "4,699.60", "Silver": "86.38", "Platinum": "2,107.50", "Palladium": "1,492.50" } },
+        { "city": "London", "time": "10:31 (GMT)", "flag": "UK", "prices": { "Gold": "4,688.80", "Silver": "86.36", "Platinum": "2,120.50", "Palladium": "1,494.00" } },
+        { "city": "New York", "time": "10:31 (EDT)", "flag": "US", "prices": { "Gold": "4,684.25", "Silver": "87.74", "Platinum": "2,160.00", "Palladium": "1,505.50" } }
+      ]
+    },
+    "disclaimer": "Source: Kitco. Values are shown as data-driven site widgets and can be updated in data/site.json or wired to a licensed market data feed."
+  },
+  "footer": {
+    "copyright": "(c) 2026 Nevada Mining Resources. All rights reserved.",
+    "note": "Official website of Nevada Mining Resources."
+  },
+  "whiteLabel": {
+    "instructions": [
+      "Change names, logos, offices, navigation, and section copy in this JSON file.",
+      "Replace assets/images/nevada-mining-resources-logo.png and assets/images/gold-infinity.png for a new brand.",
+      "Keep the same data shape to reuse the current renderer without framework changes."
+    ]
+  }
+}
