@@ -166,133 +166,109 @@ function renderContact(contact) {
 function renderMarketWidget(widget) {
   const { section, inner } = sectionShell(widget.id, widget.kicker, widget.title, widget.intro);
   append(inner, [
-    renderMorningFix(widget.morningFix),
-    renderSpotPrice(widget.spot, widget),
-    renderSpotPrice(widget.newYorkSpot, widget)
+    renderKitcoWidget("widget_live_precious_metals"),
+    renderKitcoWidget("widget_spot_price"),
+    renderKitcoWidget("widget_morning_fix"),
+    renderKitcoWidget("widget_cross_rates")
   ]);
+  queueMicrotask(initKitcoWidgets);
   return section;
 }
 
-function renderMorningFix(fix) {
-  const shell = el("div", `mt-10 overflow-hidden rounded-lg ${glass} ${smooth}`);
-  const header = el("div", "flex flex-col gap-4 border-b border-gold-300/15 p-5 lg:flex-row lg:items-center lg:justify-between");
-  const title = el("div", "flex items-center gap-3");
-  title.appendChild(el("span", "flex h-8 w-8 items-center justify-center rounded-full bg-gold-500/20 text-sm font-semibold text-gold-300 ring-1 ring-gold-300/20", { text: "i" }));
-  title.appendChild(el("h3", "text-xl font-semibold text-white", { text: fix.title }));
-
-  const tools = el("div", "flex flex-wrap items-center gap-2 text-sm");
-  [
-    fix.date,
-    fix.currency,
-    fix.unit,
-    "Historical Data",
-    "Widget - Coming Soon",
-    "Algorithm - Coming Soon",
-    "Data Subscription - Coming Soon"
-  ].forEach((item) => {
-    tools.appendChild(el("span", "rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold text-stone-200 ring-1 ring-white/10", { text: item }));
-  });
-  append(header, [title, tools]);
-
-  const note = el("div", "border-b border-gold-300/15 px-5 py-4 text-sm text-stone-300", { text: fix.note });
-  const grid = el("div", "grid gap-4 p-5 md:grid-cols-2 xl:grid-cols-4");
-  fix.hubs.forEach((hub) => {
-    grid.appendChild(renderMorningFixHub(hub));
-  });
-
-  append(shell, [header, note, grid]);
-  return shell;
+function renderKitcoWidget(widgetId) {
+  const wrapper = el("div", "widget-wrapper", { style: "margin: 50px auto 0 auto; width: 100%; display: flex; justify-content: center;" });
+  wrapper.appendChild(el("div", "", { id: widgetId, style: "margin-bottom: 60px;width:100%" }));
+  return wrapper;
 }
 
-function renderMorningFixHub(hub) {
-  const card = el("article", `rounded-lg p-5 ${softGlass} ${smooth}`);
-  const header = el("div", "flex items-center gap-3 border-b border-white/10 pb-4");
-  const flag = el("div", "flex h-9 w-12 items-center justify-center rounded-md bg-white/10 text-xs font-bold text-gold-300 ring-1 ring-white/10", { text: hub.flag });
-  const labels = el("div", "");
-  labels.appendChild(el("h4", "text-sm font-semibold uppercase tracking-[0.18em] text-white", { text: hub.city }));
-  labels.appendChild(el("p", "mt-1 text-xs text-stone-400", { text: hub.time }));
-  append(header, [flag, labels]);
+function initKitcoWidgets() {
+  const widgets = [
+    {
+      id: "widget_live_precious_metals",
+      src: "https://storage.googleapis.com/kitco-widgets-storage/widgetLivePreciousMetals.bundle.js",
+      factory: "createLivePreciousMetalsWidget",
+      config: {
+        widgetId: "widget_live_precious_metals",
+        width: "1000",
+        isTransparent: false,
+        colorTheme: "dark",
+        defaultUnit: "Troy Ounces",
+        defaultCurrency: "USD",
+        defaultListMetals: ["AU", "AG", "PT", "PD"],
+        defaultCardSize: "Regular",
+        defaultLayout: "Horizontal",
+        defaultPriceType: "Bid",
+        defaultBadgeStyle: "Colored"
+      }
+    },
+    {
+      id: "widget_spot_price",
+      src: "https://storage.googleapis.com/kitco-widgets-storage/widgetSpotPrice.bundle.js",
+      factory: "createSpotePriceWidget",
+      config: {
+        width: 300,
+        isTransparent: false,
+        colorTheme: "dark"
+      }
+    },
+    {
+      id: "widget_morning_fix",
+      src: "https://storage.googleapis.com/kitco-widgets-storage/widgetMorningFix.bundle.js",
+      factory: "createMorningFixWidget",
+      config: {
+        widgetId: "widget_morning_fix",
+        width: "500",
+        isTransparent: false,
+        colorTheme: "dark",
+        defaultUnit: "Troy Ounces",
+        defaultCurrency: "USD",
+        defaultDaysNumber: 2,
+        defaultLocation: ["New York", "London", "Hong Kong", "Mumbai"],
+        defaultListMetals: ["AU", "AG", "PT", "PD"]
+      }
+    },
+    {
+      id: "widget_cross_rates",
+      src: "https://storage.googleapis.com/kitco-widgets-storage/widgetCrossRates.bundle.js",
+      factory: "createCrossRatesWidget",
+      config: {
+        widgetId: "widget_cross_rates",
+        width: "600",
+        isTransparent: false,
+        colorTheme: "dark",
+        defaultUnit: "Troy Ounces",
+        defaultShowChange: true,
+        defaultCurrencyList: ["USD", "AUD", "BRL", "CAD", "CHF", "CNY", "EUR", "GBP", "HKD", "INR", "JPY", "MXN", "RUB", "ZAR"]
+      }
+    }
+  ];
 
-  const list = el("dl", "mt-4 space-y-3");
-  Object.entries(hub.prices).forEach(([metal, price]) => {
-    const row = el("div", "flex items-center justify-between gap-4");
-    row.appendChild(el("dt", "text-xs font-semibold uppercase tracking-[0.14em] text-stone-400", { text: metal }));
-    row.appendChild(el("dd", "text-sm font-semibold text-white", { text: price }));
-    list.appendChild(row);
+  widgets.forEach((widget) => {
+    loadKitcoScript(widget.src, () => {
+      if (typeof window[widget.factory] === "function") {
+        window[widget.factory](widget.id, widget.config);
+      } else {
+        console.error(`window.${widget.factory} is not a function`);
+      }
+    });
   });
-
-  append(card, [header, list]);
-  return card;
 }
 
-function renderSpotPrice(spot, widget) {
-  const shell = el("div", `mt-10 overflow-hidden rounded-lg ${glass} ${smooth}`);
-  const titleBar = el("div", "border-b border-gold-300/15 px-5 py-4 text-center");
-  titleBar.appendChild(el("h3", "text-xl font-semibold text-white", { text: spot.title }));
-  const topBar = el("div", "grid gap-4 border-b border-gold-300/15 p-5 lg:grid-cols-3 lg:items-center");
+function loadKitcoScript(src, onload) {
+  const existing = document.querySelector(`script[src="${src}"]`);
+  if (existing) {
+    existing.addEventListener("load", onload, { once: true });
+    if (existing.dataset.loaded === "true") onload();
+    return;
+  }
 
-  const controls = el("div", "flex flex-wrap gap-3");
-  controls.appendChild(el("span", "inline-flex h-9 items-center rounded-md border border-white/10 bg-white/10 px-3 text-sm font-semibold text-white", { text: spot.currency }));
-  controls.appendChild(el("span", "inline-flex h-9 items-center rounded-md border border-white/10 bg-white/10 px-3 text-sm font-semibold text-white", { text: spot.unit }));
-
-  const status = el("div", "text-center");
-  append(status, [
-    el("p", "text-sm font-semibold uppercase tracking-[0.18em] text-emerald-300", { text: `Market is ${spot.marketStatus}` }),
-    el("p", "mt-1 text-xs text-stone-400", { text: spot.closeNote })
-  ]);
-
-  const legend = el("div", "flex items-center justify-start gap-3 lg:justify-end");
-  [
-    ["bg-emerald-500", spot.statusNote],
-    ["bg-yellow-600/60", "Market state pending."],
-    ["bg-red-800/70", "Precious metals spot market is closed."]
-  ].forEach(([color, label]) => {
-    legend.appendChild(el("span", `h-3 w-3 rounded-full ${color}`, { title: label }));
-  });
-  append(topBar, [controls, status, legend]);
-
-  const tableWrap = el("div", "overflow-x-auto");
-  const table = el("table", "min-w-[920px] w-full border-collapse text-sm");
-  const thead = el("thead", "bg-white/10 text-left text-xs uppercase tracking-[0.14em] text-gold-300");
-  const headRow = el("tr", "");
-  spot.columns.forEach((column) => {
-    headRow.appendChild(el("th", "px-4 py-4 font-semibold", { text: column }));
-  });
-  thead.appendChild(headRow);
-
-  const tbody = el("tbody", "divide-y divide-white/10");
-  spot.prices.forEach((price) => {
-    const isDown = price.direction === "down";
-    const isFlat = price.direction === "flat";
-    const changeColor = isFlat ? "text-stone-300" : isDown ? "text-red-300" : "text-emerald-300";
-    const row = el("tr", "bg-white/0 transition-colors duration-500 hover:bg-white/10");
-    const metalCell = el("td", "px-4 py-4");
-    const metalLink = el("a", "inline-flex items-center gap-2 font-semibold text-white transition-colors duration-500 hover:text-gold-300", { href: price.href, target: "_blank", rel: "noreferrer" });
-    metalLink.appendChild(el("span", "inline-block h-3 w-3 rounded-sm bg-gold-500/80"));
-    metalLink.appendChild(el("span", "", { text: price.metal }));
-    metalCell.appendChild(metalLink);
-
-    append(row, [
-      metalCell,
-      el("td", "px-4 py-4 text-stone-300", { text: price.date }),
-      el("td", "px-4 py-4 text-stone-300", { text: price.time }),
-      el("td", "px-4 py-4 font-semibold text-white", { text: price.bid }),
-      el("td", "px-4 py-4 font-semibold text-white", { text: price.ask }),
-      el("td", `px-4 py-4 font-semibold ${changeColor}`, { text: `${price.change} / ${price.changePercent}` }),
-      el("td", "px-4 py-4 text-stone-300", { text: price.low }),
-      el("td", "px-4 py-4 text-stone-300", { text: price.high })
-    ]);
-    tbody.appendChild(row);
-  });
-  append(table, [thead, tbody]);
-  tableWrap.appendChild(table);
-
-  const bottom = el("div", "flex flex-col gap-4 border-t border-gold-300/15 px-5 py-4 text-sm text-stone-300 sm:flex-row sm:items-center sm:justify-between");
-  bottom.appendChild(el("p", "leading-6", { text: widget.disclaimer }));
-  bottom.appendChild(el("a", "inline-flex shrink-0 items-center justify-center rounded-full bg-gold-500 px-5 py-2 text-sm font-semibold text-neutral-950 shadow-glow transition-all duration-500 hover:bg-gold-300", { href: widget.sourceUrl, target: "_blank", rel: "noreferrer", text: `Open ${widget.sourceName}` }));
-
-  append(shell, [titleBar, topBar, tableWrap, bottom]);
-  return shell;
+  const script = document.createElement("script");
+  script.src = src;
+  script.onload = () => {
+    script.dataset.loaded = "true";
+    onload();
+  };
+  document.body.appendChild(script);
 }
 
 function renderFooter(data) {

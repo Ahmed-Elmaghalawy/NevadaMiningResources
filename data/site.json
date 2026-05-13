@@ -159,55 +159,7 @@
     "id": "live-prices",
     "kicker": "Live Metals",
     "title": "Kitco Market Prices",
-    "intro": "Precious metals market references for World Spot Price and Kitco Morning Fix.",
-    "sourceName": "Kitco Precious Metals",
-    "sourceUrl": "https://www.kitco.com/price/precious-metals",
-    "spot": {
-      "title": "World Spot Price",
-      "currency": "USD",
-      "unit": "OZ",
-      "marketStatus": "OPEN",
-      "statusNote": "Precious metals spot market is currently active and trading.",
-      "closeNote": "Will close in 58 mins.",
-      "columns": ["Metals", "Date", "Time (EST)", "Bid", "Ask", "Change", "Low", "High"],
-      "prices": [
-        { "metal": "Gold", "href": "https://www.kitco.com/price/precious-metals/gold", "date": "May 13, 2026", "time": "16:03", "bid": "4,685.50", "ask": "4,687.50", "change": "-28.90", "changePercent": "-0.61%", "direction": "down", "low": "4,669.00", "high": "4,727.60" },
-        { "metal": "Silver", "href": "https://www.kitco.com/price/precious-metals/silver", "date": "May 13, 2026", "time": "16:03", "bid": "87.41", "ask": "87.66", "change": "0.97", "changePercent": "1.12%", "direction": "up", "low": "82.71", "high": "89.47" },
-        { "metal": "Platinum", "href": "https://www.kitco.com/price/precious-metals/platinum", "date": "May 13, 2026", "time": "16:03", "bid": "2,147.00", "ask": "2,157.00", "change": "23.00", "changePercent": "1.08%", "direction": "up", "low": "2,094.00", "high": "2,201.00" },
-        { "metal": "Palladium", "href": "https://www.kitco.com/price/precious-metals/palladium", "date": "May 13, 2026", "time": "16:03", "bid": "1,486.00", "ask": "1,526.00", "change": "13.00", "changePercent": "0.88%", "direction": "up", "low": "1,455.00", "high": "1,550.00" },
-        { "metal": "Rhodium", "href": "https://www.kitco.com/charts/rhodium", "date": "May 12, 2026", "time": "18:00", "bid": "9,500.00", "ask": "10,500.00", "change": "-", "changePercent": "-", "direction": "flat", "low": "9,300.00", "high": "10,600.00" }
-      ]
-    },
-    "newYorkSpot": {
-      "title": "New York Spot Price",
-      "currency": "USD",
-      "unit": "OZ",
-      "marketStatus": "OPEN",
-      "statusNote": "Precious metals spot market is currently active and trading.",
-      "closeNote": "Will close in 55 mins.",
-      "columns": ["Metals", "Date", "Time (EST)", "Bid", "Ask", "Change", "Low", "High"],
-      "prices": [
-        { "metal": "Gold", "href": "https://www.kitco.com/price/precious-metals/gold", "date": "May 13, 2026", "time": "16:05", "bid": "4,685.90", "ask": "4,687.90", "change": "-28.50", "changePercent": "-0.60%", "direction": "down", "low": "4,669.00", "high": "4,727.60" },
-        { "metal": "Silver", "href": "https://www.kitco.com/price/precious-metals/silver", "date": "May 13, 2026", "time": "16:05", "bid": "87.39", "ask": "87.64", "change": "0.95", "changePercent": "1.09%", "direction": "up", "low": "82.71", "high": "89.47" },
-        { "metal": "Platinum", "href": "https://www.kitco.com/price/precious-metals/platinum", "date": "May 13, 2026", "time": "16:05", "bid": "2,147.00", "ask": "2,157.00", "change": "23.00", "changePercent": "1.08%", "direction": "up", "low": "2,094.00", "high": "2,201.00" },
-        { "metal": "Palladium", "href": "https://www.kitco.com/price/precious-metals/palladium", "date": "May 13, 2026", "time": "16:05", "bid": "1,486.00", "ask": "1,526.00", "change": "13.00", "changePercent": "0.88%", "direction": "up", "low": "1,455.00", "high": "1,550.00" },
-        { "metal": "Rhodium", "href": "https://www.kitco.com/charts/rhodium", "date": "May 12, 2026", "time": "18:00", "bid": "9,500.00", "ask": "10,500.00", "change": "-", "changePercent": "-", "direction": "flat", "low": "9,300.00", "high": "10,600.00" }
-      ]
-    },
-    "morningFix": {
-      "title": "Kitco Morning Fix",
-      "date": "May 13, 2026",
-      "currency": "USD",
-      "unit": "OZ",
-      "note": "Prices posted around 10:30 AM local time in each hub",
-      "hubs": [
-        { "city": "Hong Kong", "time": "10:31 (HKT)", "flag": "HK", "prices": { "Gold": "4,698.45", "Silver": "86.83", "Platinum": "2,111.00", "Palladium": "1,490.00" } },
-        { "city": "Mumbai", "time": "10:31 (IST)", "flag": "IN", "prices": { "Gold": "4,699.60", "Silver": "86.38", "Platinum": "2,107.50", "Palladium": "1,492.50" } },
-        { "city": "London", "time": "10:31 (GMT)", "flag": "UK", "prices": { "Gold": "4,688.80", "Silver": "86.36", "Platinum": "2,120.50", "Palladium": "1,494.00" } },
-        { "city": "New York", "time": "10:31 (EDT)", "flag": "US", "prices": { "Gold": "4,684.25", "Silver": "87.74", "Platinum": "2,160.00", "Palladium": "1,505.50" } }
-      ]
-    },
-    "disclaimer": "Source: Kitco. Values are shown as data-driven site widgets and can be updated in data/site.json or wired to a licensed market data feed."
+    "intro": "Live Kitco precious metals, spot price, morning fix, and cross-rate widgets."
   },
   "footer": {
     "copyright": "(c) 2026 Nevada Mining Resources. All rights reserved.",
